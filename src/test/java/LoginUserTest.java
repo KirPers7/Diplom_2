@@ -9,7 +9,7 @@ import static java.net.HttpURLConnection.HTTP_OK;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class LoginUserTest extends BaseTest{
+public class LoginUserTest extends BaseTest {
 
     @Test
     @DisplayName("authorization")
@@ -35,6 +35,5 @@ public class LoginUserTest extends BaseTest{
                 .assertThat()
                 .statusCode(HttpURLConnection.HTTP_UNAUTHORIZED)
                 .body("success", equalTo(false));
-        ;
     }
 }

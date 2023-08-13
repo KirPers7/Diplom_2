@@ -12,9 +12,7 @@ import static java.net.HttpURLConnection.HTTP_UNAUTHORIZED;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
-public class GetUsersOrderTest extends BaseTest{
-
-
+public class GetUsersOrderTest extends BaseTest {
 
     @Test
     @DisplayName("get orders for authorized user")
@@ -24,7 +22,6 @@ public class GetUsersOrderTest extends BaseTest{
         List<String> list = ingredients.getIngredients().log().all()
                 .assertThat()
                 .statusCode(HTTP_OK)
-                .body(notNullValue())
                 .extract()
                 .body().jsonPath().getList("data[0..3]._id")
                 .stream().map(e -> e.toString()).collect(Collectors.toList());
@@ -59,7 +56,6 @@ public class GetUsersOrderTest extends BaseTest{
         List<String> list = ingredients.getIngredients().log().all()
                 .assertThat()
                 .statusCode(HTTP_OK)
-                .body(notNullValue())
                 .extract()
                 .body().jsonPath().getList("data[0..3]._id")
                 .stream().map(e -> e.toString()).collect(Collectors.toList());

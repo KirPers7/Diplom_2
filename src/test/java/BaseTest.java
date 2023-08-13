@@ -27,12 +27,11 @@ public class BaseTest {
     protected String accessToken;
     protected String refreshToken;
     protected String name;
-    User user = generator.random();
-    User failUser = generator.failRandom();
-    Credentials otherUser = generator.otherRandomCreds();
-    UserInfo otherDataUser = generator.randomUpdateUser();
-    Order orderWithIncorrectHash = IncorrectHashGenerator.randomIngredient();
-
+    protected User user = generator.random();
+    protected User failUser = generator.failRandom();
+    protected Credentials otherUser = generator.otherRandomCreds();
+    protected UserInfo otherDataUser = generator.randomUpdateUser();
+    protected Order orderWithIncorrectHash = IncorrectHashGenerator.randomIngredient();
 
     @Before
     @DisplayName("check create user")

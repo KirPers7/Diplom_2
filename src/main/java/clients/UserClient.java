@@ -6,7 +6,6 @@ import pojo.users.Credentials;
 import pojo.users.User;
 import pojo.users.UserInfo;
 
-
 public class UserClient extends Client {
 
     @Step("Запрос на создание пользователя")

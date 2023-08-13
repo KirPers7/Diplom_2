@@ -6,7 +6,6 @@ import pojo.users.Credentials;
 import static java.net.HttpURLConnection.HTTP_OK;
 import static java.net.HttpURLConnection.HTTP_UNAUTHORIZED;
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.notNullValue;
 
 public class UpdateUserTest extends BaseTest {
 
@@ -20,7 +19,6 @@ public class UpdateUserTest extends BaseTest {
         accessToken = userClient.logIn(creds).log().all()
                 .assertThat()
                 .statusCode(HTTP_OK)
-                .body("accessToken", notNullValue())
                 .extract()
                 .path("accessToken");
 

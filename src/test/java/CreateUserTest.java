@@ -5,7 +5,7 @@ import org.junit.Test;
 import static java.net.HttpURLConnection.HTTP_FORBIDDEN;
 import static org.hamcrest.Matchers.equalTo;
 
-public class CreateUserTest extends BaseTest{
+public class CreateUserTest extends BaseTest {
 
     @Test
     @DisplayName("check create user with same data")
